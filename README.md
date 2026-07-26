@@ -2,19 +2,19 @@
 
 A simple, clean, and lightweight desktop note-taking application built with **Python**, **CustomTkinter**, and **SQLite**.
 
-MindJot focuses on doing one thing well: quickly capturing your thoughts without unnecessary features or distractions.
+MindJot is designed to be distraction-free. Create, edit, and delete notes with automatic saving, all in a clean modern interface.
 
 ---
 
 ## ✨ Features
 
 - 📝 Create notes
-- ✏️ Edit existing notes
+- ✏️ Edit notes
 - 🗑️ Delete notes
-- 💾 Automatically saves all notes
+- 💾 Automatic saving with SQLite
 - 🌙 Clean dark interface
 - ⚡ Lightweight and fast
-- 🖥️ Offline desktop application
+- 🖥️ Works completely offline
 
 ---
 
@@ -24,12 +24,24 @@ MindJot focuses on doing one thing well: quickly capturing your thoughts without
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Installation
+
+### Download (Recommended)
+
+Download the latest release here:
+
+**https://github.com/CpSharp404/MindJot/releases/tag/v1.0**
+
+No Python installation is required.
+
+---
+
+### Build From Source
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/MindJot.git
+git clone https://github.com/CpSharp404/MindJot.git
 cd MindJot
 ```
 
@@ -45,7 +57,7 @@ Activate it (Windows):
 .venv\Scripts\activate
 ```
 
-Install the required packages:
+Install the dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -64,6 +76,8 @@ python main.py
 - Python
 - CustomTkinter
 - SQLite
+- Pillow
+- PyInstaller
 
 ---
 
@@ -83,13 +97,14 @@ MindJot/
 
 ## 📄 License
 
-Licensed under the MIT License.
+This project is licensed under the MIT License.
 
 ---
 
 <div align="center">
 
-**MindJot**  
+### 🧠 MindJot
+
 *A simple place to keep your thoughts.*
 
 </div>
