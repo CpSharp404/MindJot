@@ -1,15 +1,14 @@
 import sqlite3
 from datetime import datetime
 from pathlib import Path
+import os
 
-# 1. Get the 'database' folder path
-DB_FOLDER_PATH = Path(__file__).resolve().parent
+# Create Notes Folder
+app_data = Path(os.getenv("LOCALAPPDATA")) / "MindJot"
+app_data.mkdir(parents=True, exist_ok=True)
 
-# 2. Go UP one level to the root folder (root_folder)
-ROOT_DIR = DB_FOLDER_PATH.parent
-
-# 3. Now go DOWN into the 'data' folder to find notes.db
-DB_PATH = ROOT_DIR / "data" / "notes.db"
+# Note Folder
+DB_PATH = app_data / "notes.db"
 
 
 def create_connection():

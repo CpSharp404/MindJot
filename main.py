@@ -1,3 +1,5 @@
+import os
+import sys
 import customtkinter as ctk
 from database.database import get_all_notes, update_note, add_note, delete_note
 
@@ -9,7 +11,19 @@ ctk.set_default_color_theme("blue")
 app = ctk.CTk()
 app.title("MindJOT")
 app.geometry("800x500")
-app.iconbitmap("assets/MindJot-ICON.ico")
+
+# --------------------------------------------------
+# For Exporting
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except AttributeError:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+# ---------------------------------------------------
+
+app.iconbitmap(resource_path("assets/MindJot-ICON.ico"))
 
 # Row and Column config
 app.grid_columnconfigure(0, weight=1)
